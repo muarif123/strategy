@@ -89,10 +89,7 @@ app.post('/send-email', async (req, res) => {
     const { recipient, name, email, message } = req.body;
 
     // Validate the "recipient" email address
-    const validEmails = ['info@strategicinvestments.ae', 'hr@strategicinvestments.ae'];
-    if (!validEmails.includes(recipient)) {
-        return res.status(400).send({ message: 'Invalid recipient email address' });
-    }
+    
 
     const mailOptions = {
         // from: email, // Sender address based on form input
